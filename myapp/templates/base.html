@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Party!</title>
+    <title>🕒 Time Cards</title>
 </head>
 <body>
     <ul class="nav">
@@ -19,17 +19,17 @@
 
         {% if current_user.is_authenticated %}
         <li class="nav-link">
-            <a href="{{url_for('users.logout')}}">Log Out</a>
+            <a href="{{url_for('users.account')}}">Account</a>
         </li>
         <li class="nav-link">
-            <a href="{{url_for('users.account')}}">Account</a>
+            <a href="{{url_for('users.logout')}}">Log Out</a>
         </li>
         {% else %}
         <li class="nav-link">
-            <a href="{{url_for('users.login')}}">Log In</a>
+            <a href="{{url_for('users.register')}}">Register</a>
         </li>
         <li class="nav-link">
-            <a href="{{url_for('users.register')}}">Register</a>
+            <a href="{{url_for('users.login')}}">Log In</a>
         </li>
         {% endif %}
     </ul>
