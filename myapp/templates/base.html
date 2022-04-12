@@ -20,7 +20,10 @@
 
         {% if current_user.is_authenticated %}
         <li class="nav-link">
-            <a href="{{url_for('users.account')}}">Account</a>
+            <a href="{{url_for('time_cards.create_card')}}">Punch In</a> 
+        </li>
+        <li class="nav-link">
+            <a href="{{url_for('users.account')}}">Punch Out</a>
         </li>
         <li class="nav-link">
             <a href="{{url_for('users.logout')}}">Log Out</a>
