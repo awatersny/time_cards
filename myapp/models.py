@@ -36,7 +36,7 @@ class TimeCard(db.Model):
     __tablename__ = 'time_cards'
     id = db.Column(db.Integer, primary_key=True)
     time_in = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    time_out = db.Column(db.DateTime, nullable=True, default=datetime.utcnow)
+    time_out = db.Column(db.DateTime, nullable=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
     def __init__(self, user_id):
