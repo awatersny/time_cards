@@ -3,4 +3,4 @@ from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired
 
 class TimeCardForm(FlaskForm):
-  submit = SubmitField('Post')
+  submit = SubmitField('Punch in')

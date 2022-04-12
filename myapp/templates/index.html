@@ -2,15 +2,14 @@
 {% block content %}
     <div class="jumbotron">
         <h1>🕒 Time Cards</h1>
-        {% print(time_cards.items[0]) %}
+        {% print(time_cards.items[2]).time_in.now() %}
     </div>
-    
     <div class="container">
         {% for card in time_cards.items %}
             <div class="card">
                 <div class="car-boy">
-                    <h2>Date: {{card.time_in}}</h2>
-                    <h2>In: {{card.time_in}}</h2>
+                    <h2>Date: {{card.time_in.month}}-{{card.time_in.day}}-{{card.time_in.year}}</h2>
+                    <h2>In: {{card.time_in.hour}}:{{0 if card.time_in.minute < 10 else ""}}{{card.time_in.minute}}:{{0 if card.time_in.second < 10 else ""}}{{card.time_in.second}}</h2>
                     <h2>Out: {{card.time_out}}</h2>
                 </div>
             </div>
