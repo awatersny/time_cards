@@ -57,3 +57,6 @@ app.register_blueprint(users)
 #linking time cards views Blueprint
 from myapp.time_cards.views import time_cards
 app.register_blueprint(time_cards)
+
+from myapp.core.views import core 
+app.register_blueprint(core)
