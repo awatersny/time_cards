@@ -2,6 +2,19 @@
 {% block content %}
     <div class="jumbotron">
         <h1>🕒 Time Cards</h1>
+        {% print(time_cards.items[0]) %}
     </div>
-
+    
+    <div class="container">
+        {% for card in time_cards.items %}
+            <div class="card">
+                <div class="car-boy">
+                    <h2>Date: {{card.time_in}}</h2>
+                    <h2>In: {{card.time_in}}</h2>
+                    <h2>Out: {{card.time_out}}</h2>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
+
