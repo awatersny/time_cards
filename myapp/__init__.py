@@ -52,3 +52,8 @@ app.register_blueprint(error_pages)
 #linking users views Blueprint
 from myapp.users.views import users
 app.register_blueprint(users)
+
+
+#linking time cards views Blueprint
+from myapp.time_cards.views import time_cards
+app.register_blueprint(time_cards)
