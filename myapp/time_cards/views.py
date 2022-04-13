@@ -1,3 +1,4 @@
+from datetime import datetime
 from flask import render_template, url_for, flash, request, redirect, Blueprint, abort
 from flask_login import current_user, login_required
 from psycopg2 import Time
@@ -19,3 +20,21 @@ def create_card():
     print('Time card was created')
     return redirect(url_for('core.index'))
   return render_template('punch_in.html', form=form)
+
+@time_cards.route('/<int:time_card_id>/update',methods=['GET','POST'])
+@login_required
+def update(time_card_id):
+  time_card = TimeCard.query.get_or_404(time_card_id)
+
+  if time_card.employee != current_user:
+        abort(403)
+
+  form = TimeCardForm()
+
+  if form.validate_on_submit():
+        time_card.time_out = datetime.now
+        db.session.commit()
+        flash('Time Card Updated')
+        return redirect(url_for('time_cards.time_card',time_card_id=time_card.id))
+
+  return render_template('punch_in.html',title='Updating',form=form)

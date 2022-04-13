@@ -7,12 +7,37 @@
         {% for card in time_cards.items %}
             <div class="card">
                 <div class="car-boy">
+                    <h2>Employee: {{card.employee.username}}</h2>
                     <h2>Date: {{card.time_in.month}}-{{card.time_in.day}}-{{card.time_in.year}}</h2>
                     <h2>In: {{card.time_in.hour}}:{{0 if card.time_in.minute < 10 else ""}}{{card.time_in.minute}}:{{0 if card.time_in.second < 10 else ""}}{{card.time_in.second}}</h2>
                     <h2>Out: {{card.time_out}}</h2>
+                    {% if card.employee == current_user %}
+                        <div>
+                        <a class="btn btn-secondary" href="{{ url_for('time_cards.update', time_card_id=card.id) }}">Punch Out</a>
+                        <br>
+                        <form action="" method="POST">
+                        <input class="btn btn-danger" type="submit" value="X">
+                        </form>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         {% endfor %}
     </div>
-{% endblock %}
 
+    <nav aria-label="Page Navigation example">
+        <ul class="pagination justify-content-center">
+            {% for page_num in time_cards.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                {% if time_cards.page == page_num %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
+                </li>
+                {% else %}
+                <li class="page-item">
+                    <a class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
+                </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+{% endblock %}
