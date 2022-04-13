@@ -32,17 +32,18 @@ def login():
 
         user = User.query.filter_by(email=form.email.data).first()
 
-        if user.check_password(form.password.data) and user is not None:
+        if user is not None:
+            if user.check_password(form.password.data):
 
-            login_user(user)
-            flash('Log in Success!')
+                login_user(user)
+                flash('Log in Success!')
 
-            next = request.args.get('next')
+                next = request.args.get('next')
 
-            if next ==None or not next[0]=='/':
-                next = url_for('core.index')
+                if next ==None or not next[0]=='/':
+                    next = url_for('core.index')
 
-            return redirect(next)
+                return redirect(next)
 
     return render_template('login.html',form=form)
 
