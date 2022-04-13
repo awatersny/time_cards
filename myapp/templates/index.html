@@ -10,13 +10,17 @@
                     <h2>Employee: {{card.employee.username}}</h2>
                     <h2>Date: {{card.time_in.month}}-{{card.time_in.day}}-{{card.time_in.year}}</h2>
                     <h2>In: {{card.time_in.hour}}:{{0 if card.time_in.minute < 10 else ""}}{{card.time_in.minute}}:{{0 if card.time_in.second < 10 else ""}}{{card.time_in.second}}</h2>
-                    <h2>Out: {{card.time_out}}</h2>
+                    {% if card.time_out != None %}
+                        <h2>Out: {{card.time_out.hour}}:{{0 if card.time_out.minute < 10 else ""}}{{card.time_out.minute}}:{{0 if card.time_out.second < 10 else ""}}{{card.time_out.second}}</h2>
+                    {% endif %}
                     {% if card.employee == current_user %}
                         <div>
-                        <a class="btn btn-secondary" href="{{ url_for('time_cards.update', time_card_id=card.id) }}">Punch Out</a>
+                        {% if card.time_out == None %}
+                            <a class="btn btn-secondary" href="{{ url_for('time_cards.update', time_card_id=card.id) }}">Punch Out</a>
+                        {% endif %}
                         <br>
                         <form action="" method="POST">
-                        <input class="btn btn-danger" type="submit" value="X">
+                        <input class="btn btn-danger" type="submit" value="Delete">
                         </form>
                         </div>
                     {% endif %}

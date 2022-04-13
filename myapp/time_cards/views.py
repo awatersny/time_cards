@@ -32,9 +32,9 @@ def update(time_card_id):
   form = TimeCardForm()
 
   if form.validate_on_submit():
-        time_card.time_out = datetime.now
+        time_card.time_out = datetime.now()
         db.session.commit()
         flash('Time Card Updated')
-        return redirect(url_for('time_cards.time_card',time_card_id=time_card.id))
+        return redirect(url_for('core.index'))
 
   return render_template('punch_in.html',title='Updating',form=form)
