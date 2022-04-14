@@ -7,9 +7,7 @@
         {% for card in time_cards.items %}
             <div class="card">
                 <div class="car-boy">
-                        <h2 class="card-row">
-                            <span>Employee:</span>
-                            <span>{{card.employee.username}}</span></h2>
+                        <h2>{{card.employee.username}}</h2>
                         <h2 class="card-row">
                             <span>Date:</span>
                             <span>{{card.time_in.month}}-{{card.time_in.day}}-{{card.time_in.year}}</span></h2>
