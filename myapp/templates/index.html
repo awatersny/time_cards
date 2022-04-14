@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="jumbotron">
-        <h1>🕒 Time Cards</h1>
-    </div>
+    <h1>🕒 Time Cards 🕒 </h1>
     {% if current_user.username %}
         <div class="container">
             {% for card in time_cards.items %}
@@ -40,7 +38,7 @@
         </div>
 
         <nav aria-label="Page Navigation example">
-            <ul class="pagination justify-content-center">
+            <ul class="pagination">
                 {% for page_num in time_cards.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
                     {% if time_cards.page == page_num %}
                     <li class="page-item disabled">

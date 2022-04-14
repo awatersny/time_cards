@@ -3,9 +3,27 @@
 <h1>Login</h1>
 <form method="POST">
     {{form.hidden_tag()}}
-    {{form.email.label}}{{form.email}}<br>
-    {{form.password.label}}{{form.password}}<br>
-    {{form.submit()}}
+    <div class="form-row">
+        <span class="form-label">
+            {{form.email.label}}:
+        </span>
+        <span class="text-input">
+            {{form.email(class='form-control')}}
+        </span>
+    </div>
+    <br>
+    <div class="form-row">
+        <span class="form-label">
+            {{form.password.label}}:
+        </span>
+        <span class="text-input">
+            {{form.password(class='form-control')}}
+        </span>
+    </div>
+    <br>
+    <div>
+        {{form.submit(class='btn btn-primary')}}
+    </div>
 
 </form>
 {% endblock %}

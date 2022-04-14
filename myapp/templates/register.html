@@ -3,10 +3,44 @@
 <h1>Sign Up</h1>
 <form method="POST">
     {{form.hidden_tag()}}
-    {{form.email.label}}{{form.email}}<br>
-    {{form.username.label}}{{form.username}}<br>
-    {{form.password.label}}{{form.password}}<br>
-    {{form.pass_confirm.label}}{{form.pass_confirm}}<br>
-    {{form.submit()}}
+    <div class="form-row">
+        <span>
+            {{form.email.label}}:
+        </span>
+        <span>
+            {{form.email(class='form-control')}}
+        </span>
+    </div>
+    <br>
+    <div class="form-row">
+        <span>
+            {{form.username.label}}:
+        </span>
+        <span>
+            {{form.username(class='form-control')}}
+        </span>
+    </div>
+    <br>
+    <div class="form-row">
+        <span class="form-label">
+            {{form.password.label}}:
+        </span>
+        <span>
+            {{form.password(class='form-control')}}
+        </span>
+    </div>
+    <br>
+    <div class="form-row">
+        <span class="form-label">
+            {{form.pass_confirm.label}}:
+        </span>
+        <span>
+            {{form.pass_confirm(class='form-control')}}
+        </span>
+    </div>
+    <br>
+    <div>
+        {{form.submit(class='btn')}}
+    </div>
 </form>
 {% endblock %}

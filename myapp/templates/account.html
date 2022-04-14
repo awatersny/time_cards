@@ -9,19 +9,23 @@
 
 <div class="container">
     <form method="POST" action="" enctype="multipart/form-data">
-        <div class="form-group">
+        <div>
             {{form.hidden_tag()}}
         </div>
-        <div class="form-group">
-            {{form.username.label(class='form-group')}} 
+        <div class="form-row">
+            <span>
+                {{form.username.label(class='form-group')}}:
+            </span>
             {{form.username(class='form-control')}}
         </div>
-        <div class="form-group">
-            {{form.email.label(class='form-group')}} 
+        <div class="form-row">
+            <span>
+                {{form.email.label(class='form-group')}}:
+            </span>
             {{form.email(class='form-control')}}
         </div>
     
-        <div class="form-group">
+        <div>
             {{form.submit(class='btn btn-primary')}}
         </div>
     
