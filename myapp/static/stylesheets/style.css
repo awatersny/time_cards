@@ -1,3 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after {
+  /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default but can be overridden as needed */
+  box-sizing: inherit;
+}
+
+/* resets font size to be 62.5% of the user preference - in most browser configurations this will be 10px */
+:root {
+  font-size: 62.5%;
+}
+
 body {
   margin: 0;
   padding: 5vh 0 0 0;
@@ -42,6 +60,7 @@ form {
   background-image: url("../images/thomas-bormans-JsTmUnHdVYQ-unsplash.jpg");
   background-size: cover;
   color: #fff;
+  max-width: 50rem;
   width: 79vw;
   padding: 0 1rem 0 0;
   margin: 1rem;
@@ -66,7 +85,7 @@ form {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: black;
   box-shadow: 0 5px 11px black;
   position: fixed;
@@ -75,6 +94,8 @@ form {
   padding-right: 10vw;
   width: 100vw;
   height: 8vh;
+  font-size: 1.5rem;
+  list-style: none;
 }
 
 .nav-link > a {
@@ -100,10 +121,31 @@ form {
   border-radius: .4rem;
   padding: .2rem .3rem;
   list-style: none;
+  text-decoration: none;
 }
 
 .btn-danger {
   background-color: red;
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-link {
+  background-color: #a70;
+  color: #000;
+  font-size: 2rem;
+  text-decoration: none;
+  border: solid .2rem #fff;
+  border-radius: .4rem;
+  padding: .3rem .5rem;
+  margin: 0 .1rem;
+  box-shadow: 0 5px 11px #000;
+  text-shadow: 0 5px 11px #fff;
 }
 
 #confirm-stamp {
