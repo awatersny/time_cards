@@ -40,10 +40,11 @@ form, h1 {
 }
 
 h1 {
-  margin-top: 3vh;
+  margin-top: 4vh;
   background-size: cover;
   background-color: #000;
   border: .5rem inset #a70;
+  padding: 1rem;
 }
 
 h2 {
