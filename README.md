@@ -3,10 +3,6 @@ For demonstration purposes, this app will allow users to punch in, punch out and
 
 ---
 
-Initial planning done on [*trello*](https://trello.com/b/3Rk7bC7f/clock-in).
-
----
-
 ## Getting Started:
 
 The app is deployed [*here*](https://aw-time-cards.herokuapp.com/).
