@@ -79,21 +79,22 @@ form {
   background-image: url("../images/thomas-bormans-JsTmUnHdVYQ-unsplash.jpg");
   background-size: cover;
   color: #fff;
-  max-width: 50rem;
+  max-width: 100rem;
   width: 79vw;
   padding: 0 1rem 0 0;
   margin: 1rem;
-  height: 20rem;
+  height: 30vw;
   border-radius: .5rem;
   border: .5rem inset #a70;
   box-shadow: 0 5px 11px black;
+  font-size: 2vw;
 }
 
 .car-boy {
-  background-color: #060606;
+  background-color: #050505;
   padding: 0 1rem;
   border-radius: .5rem;
-  width: 93%;
+  width: 100%;
 }
 
 .card-row{
@@ -199,5 +200,9 @@ form {
 
   h1 {
     font-size: 5rem;
+  }
+
+  .card {
+
   }
 }

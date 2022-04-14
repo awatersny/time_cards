@@ -24,12 +24,8 @@
                         {% if card.employee == current_user %}
                             <div>
                             {% if card.time_out == None %}
-                                <a class="btn btn-secondary" href="{{ url_for('time_cards.update', time_card_id=card.id) }}">Punch Out</a>
+                                <a class="btn btn-primary" href="{{ url_for('time_cards.update', time_card_id=card.id) }}">Punch Out</a>
                             {% endif %}
-                            <br>
-                            <!-- <form action="" method="POST">
-                            <input class="btn btn-danger" type="submit" value="Delete">
-                            </form> -->
                             </div>
                         {% endif %}
                     </div>
