@@ -1,4 +1,6 @@
 # Time Cards
+Having once worked at a place where I had to record my attendance by writing on a sheet, typing it in excel, and sending it to HR.  I wanted to see what it would belike to build out the functionality of a clock in system using the crud operations I've learned.
+
 For demonstration purposes, this app will allow users to punch in, punch out and view all time cards.
 
 ---
