@@ -57,7 +57,7 @@ form {
   background-color: #000;
   border: .5rem inset #a70;
   padding: 1rem;
-  height: 30vw;
+  height: 20rem;
   max-width: 100rem;
   width: 79vw;
   display: flex;
@@ -197,6 +197,7 @@ form {
 @media only screen and (min-width: 800px) {
   form {
     font-size: 2vw;
+    height: 30vw;
   }
 
   form > div > .btn {
