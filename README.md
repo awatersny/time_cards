@@ -11,6 +11,26 @@ The app is deployed [*here*](https://aw-time-cards.herokuapp.com/).
 
 ## Screenshots:
 
+### Desktop:
+
+Landing Page:
+
+![Landing Page](./myapp/static/images/LandingD.png)
+
+Record Time Stamp:
+
+![Record Time Stamp](./myapp/static/images/RecordD.png)
+
+Time Cards:
+
+![Time Cards](./myapp/static/images/CardsD.png)
+
+### Mobile:
+
+<image src="./myapp/static/images/LandingM.jpg" width="180"/> 
+<image src="./myapp/static/images/RecordM.jpg" width="180"/> 
+<image src="./myapp/static/images/CardsM.jpg" width="180"/>
+
 ---
 
 ## Technologies Used:
