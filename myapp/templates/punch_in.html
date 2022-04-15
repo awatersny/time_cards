@@ -3,9 +3,11 @@
     <div class="container">
       <form class="punch-in" method="POST">
           {{form.hidden_tag()}}
+        <div>
           <h1 id="confirm-stamp">Record Time Stamp?</h1>
-        <div class="form-group">
-            {{form.submit(class="btn")}}
+        </div>
+        <div class="btn-group">
+            {{form.submit(class="btn btn-confirm")}}
             <a href="/" class= "btn btn-danger">No</a>
         </div>
       </form>
