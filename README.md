@@ -27,9 +27,9 @@ Time Cards:
 
 ### Mobile:
 
-<image src="./myapp/static/images/LandingM.jpg" width="180"/> 
-<image src="./myapp/static/images/RecordM.jpg" width="180"/> 
-<image src="./myapp/static/images/CardsM.jpg" width="180"/>
+<image src="./myapp/static/images/LandingM.jpg" width="170"/> 
+<image src="./myapp/static/images/RecordM.jpg" width="170"/> 
+<image src="./myapp/static/images/CardsM.jpg" width="170"/>
 
 ---
 
