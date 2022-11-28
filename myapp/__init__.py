@@ -6,6 +6,9 @@ import os
 from os import environ, path 
 from flask_migrate import Migrate
 from flask_login import LoginManager
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -19,7 +22,7 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 # set up connection to db
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://localhost:5432/time_cards"
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL').replace("://", "ql://", 1)
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL').replace("://", "ql://", 1)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
